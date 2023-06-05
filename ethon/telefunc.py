@@ -120,11 +120,11 @@ async def force_sub(client, channel, id, ft):
         x = await client(GetParticipantRequest(channel=channel, participant=int(id)))
         left = x.stringify()
         if 'left' in left:
-            s, r = True, f"{ft}\n\nAlso join @G5_F1"
+            s, r = True, f"{ft}\n\nوبعد ذالك الانضمام هنا @G5_F1"
         else:
             s, r = False, None
     except UserNotParticipantError:
-        s, r = True, f"To use this bot you've to join @{channel}.\n\nAlso join @G5_F1"
+        s, r = True, f"لاستخدام هذا الروبوت عليك الانضمام @{channel}.\n\nوبعد ذالك الانضمام هنا @G5_F1"
     except Exception:
         s, r = True, "ERROR: Add in ForceSub channel, or check your channel id."
     return s, r
