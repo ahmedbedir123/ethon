@@ -6,7 +6,6 @@ from telethon import events, Button
 async def start_srb(event, st):
     await event.reply(st, 
                       buttons=[
-                              [Button.inline("للغة العربية.", data="info")],
                               [Button.inline("SeT ThUmB.", data="set"),
                                Button.inline("DeL ThUmB.", data="rem")],
                               [Button.url("DeV", url="t.me/G5_F1")]])
